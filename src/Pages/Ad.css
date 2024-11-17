@@ -1,0 +1,16 @@
+
+.ad-layout{
+    display:grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 35px;
+
+    img{
+        width: 100%;
+        border-radius: 15px;
+    }
+}
+
+.pricing{
+    font-size: 50px;
+    font-weight: 500;
+}
