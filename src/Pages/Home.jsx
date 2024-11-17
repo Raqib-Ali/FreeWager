@@ -12,52 +12,52 @@ export function Home() {
                     </div>
                 </div>
                 <div className="img">
-                    <img width={"90%"} src='5576597.jpg' />
+                    <img  src='5576597.jpg' />
                 </div>
             </div>
 
             <div className='p-4 border border-1'>
                 <div>
-                    <h2>Browse Categories</h2>
+                    <h3>Browse Categories</h3>
                 </div>
                 <div className='categories'>
                     <div className='cat-card rounded-2'>
-                        <h2>Ac Service</h2>
+                        <h3>Ac Service</h3>
                         <p>1000+ services</p>
                     </div>
                     <div className='cat-card  rounded-2'>
-                        <h2>Ac Service</h2>
+                        <h3>Ac Service</h3>
                         <p>1000+ services</p>
                     </div>
                     <div className='cat-card  rounded-2'>
-                        <h2>Ac Service</h2>
+                        <h3>Ac Service</h3>
                         <p>1000+ services</p>
                     </div>
                     <div className='cat-card  rounded-2'>
-                        <h2>Ac Service</h2>
+                        <h3>Ac Service</h3>
                         <p>1000+ services</p>
                     </div>
                     <div className='cat-card  rounded-2'>
-                        <h2>Ac Service</h2>
+                        <h3>Ac Service</h3>
                         <p>1000+ services</p>
                     </div>
                     <div className='cat-card  rounded-2'>
-                        <h2>Ac Service</h2>
+                        <h3>Ac Service</h3>
                         <p>1000+ services</p>
                     </div>
                     <div className='cat-card  rounded-2'>
-                        <h2>Ac Service</h2>
+                        <h3>Ac Service</h3>
                         <p>1000+ services</p>
                     </div>
                     <div className='cat-card  rounded-2'>
-                        <h2>Ac Service</h2>
+                        <h3>Ac Service</h3>
                         <p>1000+ services</p>
                     </div>
                 </div>
             </div>
 
             <div className='p-4 border border-1'>
-                <h2>Recent Ads</h2>
+                <h3>Recent Ads</h3>
                 <div className='ads'>
                     <div className='ad-card '>
                         

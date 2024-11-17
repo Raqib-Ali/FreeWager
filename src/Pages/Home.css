@@ -13,27 +13,25 @@
      display: flex;
      justify-content: center;
      align-items: center;
+     
+      
+     img{
+        width: 90%;
+        max-height: 220px;
+     }
    }
 }
 
-.col1 {
-   
+.col1 { 
     background-color: aquamarine;
     display: flex;
     align-items: center;
-    div{
-        margin: auto;
-       
-    }
+    justify-content: center;
 }
 
 .title {
-    width: 75%;
+    width: 70%;
     background-color: azure;
-
-    h1{
-       font-size: 8vw;
-    }
 }
 
 .categories {
@@ -44,15 +42,7 @@
 
     .cat-card {
         padding: 25px; 
-        background-color: aliceblue;   
-        
-        h2{
-            font-size: 18px;
-        }
-
-        p{
-            font-size: 15px;
-        }
+        background-color: aliceblue;
     }
 
     .cat-card:hover {
@@ -75,7 +65,7 @@
             border-radius: 10px;
             margin-bottom: 10px;
         }
-}
+    }
 
 }
 
@@ -95,12 +85,12 @@
     }
 
     .title h1 {
-        font-size: 5vh;
+        font-size: 7vh;
         font-weight: 600;
     }
 
     .title p {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         font-weight: 500;
     }
 
@@ -108,15 +98,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
 
-        .cat-card{
-            h2{
-              
-            }
-
-            p{
-              
-            }
-        }
+       
 
     }
 
