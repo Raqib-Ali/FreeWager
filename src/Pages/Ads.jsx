@@ -12,6 +12,14 @@ export function Ads() {
         Image: "../ad-image.png",
         Rating: "5.0"
 
+    },
+    {
+
+        Name:"Raqib Ali",
+        Discription:"Aspiring Frontend Developer",
+        Image: "../ad-image.png",
+        Rating: "5.0"
+
     }]);
     
 

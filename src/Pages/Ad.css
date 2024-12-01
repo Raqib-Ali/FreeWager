@@ -1,8 +1,8 @@
 
 .ad-layout{
     display:grid;
-    grid-template-columns: 7fr 5fr;
-    gap: 35px;
+    grid-template-columns: 8fr 4fr;
+    gap: 20px;
 
     img{
         width: 100%;
@@ -11,6 +11,21 @@
 }
 
 .pricing{
-    font-size: 50px;
+    font-size: 4vw;
     font-weight: 500;
+   
+    padding: 0 10px;
+}
+
+.Service-man{
+    padding: 10px 15px;
+    margin-top: 15px;
+}
+
+.seller-prof{
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 10px;
 }
