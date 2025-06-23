@@ -1,31 +1,68 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Card } from '../Components/Card'
 import './Home.css'
+import { CarouselExample } from '../Components/Carousel';
 
 export function Home() {
 
     const [categories, setCategories] = useState([{
         Category: "Ac Services",
         Discription: "Best AC Services near you"
-    }]);
+    },
+    {
+        Category: "Ac Services",
+        Discription: "Best AC Services near you"
+    },
+    {
+        Category: "Ac Services",
+        Discription: "Best AC Services near you"
+    },
+    {
+        Category: "Ac Services",
+        Discription: "Best AC Services near you"
+    },
+    {
+        Category: "Ac Services",
+        Discription: "Best AC Services near you"
+    }
+
+
+    ]);
+
+    const [ads, setAds] = useState([]);
+
+    useEffect(() => {
+        fetch("https://dummyjson.com/products").then((response) => {
+            return response.json();
+        }).then(data => {
+            console.log(data)
+            setAds(data.products)
+        })
+
+    }, [])
 
     return (
         <div>
-            <div className="hero mb-2">
-                <div className="col1">
-                    <div className="title border-bottom border-success shadow rounded-4 p-4">
+
+            {/* Hero Section */}
+
+            <div className="hero">
+                <div className="col1 rounded-4">
+                    <div className="title border-bottom border-success shadow rounded-4">
                         <h1 className="">Find a Wager<br /> at your Door Step!</h1>
                         <p className="">Looking for a Wager?<br /> Why not Free<span className="text-success">Wager</span> today?</p>
                     </div>
                 </div>
                 <div className="img">
-                    <img src='5576597.jpg' />
+                    {/* <img src='5576597.jpg' /> */}
+                    <CarouselExample />
+                    
                 </div>
             </div>
 
-            <div className='border-bottom'>
+            <div className='containers'>
                 <div>
-                    <h3>Browse Categories</h3>
+                    <h2 className='h2'>Browse Services</h2>
                 </div>
                 <div className='categories'>
                     {categories.map(category =>
@@ -37,10 +74,10 @@ export function Home() {
                 </div>
             </div>
 
-            <div className='border-bottom'>
-                <h3>Recent Ads</h3>
+            <div className='border-bottom containers'>
+                <h2 className='h2'>Recent Services</h2>
                 <div className='ads'>
-                   
+                    {ads.map(adDetails => <Card data={adDetails} />)}
                 </div>
             </div>
         </div>
