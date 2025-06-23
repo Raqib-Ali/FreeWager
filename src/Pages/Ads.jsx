@@ -1,38 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "../Components/Card";
 import './Ads.css'
 
 export function Ads() {
 
     const [categories, setCategories] = useState(["AC Services", "Refrigerator Repair", "Painter", "Construction"]);
-    const [ads, setAds] = useState([{
+    const [ads, setAds] = useState([{}]);
 
-        Name:"Raqib Ali",
-        Discription:"Aspiring Frontend Developer",
-        Image: "../ad-image.png",
-        Rating: "5.0"
+    // useEffect(()=>{
+    //   loadData();
+    //   console.log("hi")
+    // }, [])
 
-    },
-    {
-
-        Name:"Raqib Ali",
-        Discription:"Aspiring Frontend Developer",
-        Image: "../ad-image.png",
-        Rating: "5.0"
-
-    }]);
+    (function loadData(){
+        fetch("https://dummyjson.com/products").then((response)=>{
+            return response.json();
+        }).then(data => {
+            setAds(data.products)
+        })
+    })();
     
 
     return (
         <div>
-            <div className="cat-nav border border-1">
+            <nav className="cat-nav border border-1">
                 {categories.map(category => 
-                    <div>{category}</div>
+                    <div className="">{category}</div>
                 )}
-            </div>
+            </nav>
             <h1>Ac Services</h1>
             <div className="card-wraper">
-                {ads.map(adDetails => <Card data={adDetails} />)}
+                {(ads)?ads.map(adDetails => <Card data={adDetails} />):null}
             </div>
         </div>
     )
